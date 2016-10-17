@@ -4,7 +4,8 @@
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
-var local_values = require('./local_values/values.json');
+var optional = require("optional");
+var local_values = optional('./local_values/values.json');
 
 var databaseUri = process.env.MONGODB_URI || local_values.env.MONGODB_URI;
 
